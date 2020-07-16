@@ -19,5 +19,24 @@ def board():
         fd(side)
         right(90)
 
-board()
+def cross(x,y):
+    pu()
+    setx(x*side + side/2)
+    sety(y*side + side/2)
+    pd()
+    left(45)
+    for i in range(4):
+        fd(side/4)
+        bk(side/4)
+        left(90)
+    right(45)
+    pu()
+
+def round(x,y):
+    pu()
+    setx(x*side + side/2)
+    sety(y*side + side/2 - side/4)
+    pd()
+    circle(side/4)
+
 done()
